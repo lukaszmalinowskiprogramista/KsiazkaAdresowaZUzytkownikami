@@ -1,0 +1,4 @@
+1|1|Artur|Nowak|333 222 111|artur@nowak.pl|ul. Wesoła 3a; 33-300 Krakow|
+3|1|Agata|Wiśniewska|444 222 111|agata@wisniewska.pl|ul. Piękna 7/8; 33-300 Krakow|
+4|2|lukasz|malinowski|666|666|66|
+6|1|Feliks|Kowalski|mm|mm|ul. Kanalowa 2, Gdynia|

@@ -1,0 +1,11 @@
+1|Marcel|mama|
+2|Marian|sowa|
+3|Monia|koza|
+4|iriam|eden|
+5|arolina|alina|
+6|Konan|arbarzynca|
+7|Konan |dkd|
+8||Wal|
+9|Franek|Dak|
+10|Nela|malinowska|
+11|Adam|Miler|

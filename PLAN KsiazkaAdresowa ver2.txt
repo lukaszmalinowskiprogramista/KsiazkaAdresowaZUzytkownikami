@@ -1,0 +1,39 @@
+//PLAN
+//Na podstawie "Jak stworzyć rozbudowany program"
+//stworz Menu glowne Logowanie/Rejestracja/Zamknij program
+//Rejestracja tworzy nowego użytkownika
+//Logowanie przenosi na do menu znanego z "Ksiazki adresowej" 
+//tj. Wyszukaj po imieniu/Wyszukaj po nazwisku/...
+//Kazdy zalogowany uzytkownik ma dostep do wpisow przeznaczonych 
+//tylko dla niego.
+//Kazdy Uzytkownik ma id zarezerwowane tylko dla niego
+
+//idUzytkownika|nazwa|haslo
+
+//Kazdy Adresat ma id zarazerwowane tylko dla niego uwzgledniajacy id Uzytkowania
+
+//idAdresata|idUżytkownika|imie|nazwisko|numerTelefonu|email|adres|
+
+//Aplikacja będzie posiadać 2 pliki tekstowe:
+//Adresaci.txt
+//Uzytkownicy.txt
+//W programie nalezy utworzyć dodatkową strukturę użytkownik oraz vector
+//Optymalizacja pod wzgledem pamieci:
+//Po zalogowaniu  wczytaj tych adresatow ktorzy naleza 
+//do konkretnego uzytkowanika
+//ZASPIS DANYCH
+//Funkcja zapisująca dane do pliku otwiera plik oryginalny
+//oraz tworzy plik tymczasowy. Następnie pobiera pierwszą linijkę i sprawdza
+//czy numer id adresata jest identyczny z numerem id przed chwilą edytowanego
+//adresata. W pierwszym przypadku nie są takie same. 
+//Dlatego też linia z oryginalnego pliku jest przepisywana do pliku
+//tymczasowego bez zmian. 
+//Identyczna sytuacja ma miejsce dla adresata o id=2 ( drugiej linii).
+//Kolejno program pobiera trzecią linię i jak widać numery id się zgadzają.
+// Różnica polega teraz na tym, że linia z oryginalnego pliku nie jest teraz 
+// przepisywana, tylko dane edytowanego adresata są pobierane z obiektu 
+// Adresat i zamieniane na linię z danymi oddzielonymi pionowymi kreskami, 
+// a następnie zapisywane do pliku tymczasowego.
+// Gdy wszystkie dane zostaną przepisane to kolejno 
+// usuwamy plik oryginalny, a nazwę pliku tymczasowego 
+// zamieniamy na nazwę oryginalnego pliku.
