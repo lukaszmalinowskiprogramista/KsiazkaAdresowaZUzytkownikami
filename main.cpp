@@ -174,12 +174,14 @@ void wyszukajPoImieniuLubNazwisku(vector <Adresat> &adresaci, string wyborImieLu
     }
     if(czyIstniejeTakiAdresat==0)
         cout<<"Taki Adresat Nie Wystepuje w bazie. Sprobuj Ponownie";
+    system("pause");
 }
 
-void dodajAdresata(vector <Adresat> &adresaci,int idUzytkownika, int idOstatniegoAdresata) {
+void dodajAdresata(vector <Adresat> &adresaci,int idUzytkownika, int &idOstatniegoAdresata) {
     Adresat tymczasowyAdresat;
 
-    tymczasowyAdresat.idAdresata= idOstatniegoAdresata+1;
+    idOstatniegoAdresata++;
+    tymczasowyAdresat.idAdresata= idOstatniegoAdresata;
     tymczasowyAdresat.idUzytkownika=idUzytkownika;
 
     cout << "Dodaj Adresata" << endl;
@@ -411,8 +413,8 @@ int main() {
 
             cin >> wybranaOpcja;
 
-            if (wybranaOpcja == 1)
-                dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+            if (wybranaOpcja == 1){
+                dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);}
             else if (wybranaOpcja == 2)
                 wyszukajPoImieniuLubNazwisku(adresaci, "imie");
             else if (wybranaOpcja == 3)
