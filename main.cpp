@@ -64,6 +64,7 @@ int wczytajDaneAdresatowZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzy
         system("pause");
 
     } else {
+        tymczasowyAdresat.idAdresata=0;
         while(getline(plikAdresaci >> ws,idAdresataString, '|')) {
             tymczasowyAdresat.idAdresata=stoi(idAdresataString);
 
@@ -77,15 +78,11 @@ int wczytajDaneAdresatowZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzy
             getline(plikAdresaci,tymczasowyAdresat.adres, '|');
             if(idZalogowanegoUzytkownika==tymczasowyAdresat.idUzytkownika)
                 adresaci.push_back(tymczasowyAdresat);
-
         }
     }
     plikAdresaci.close();
 
-    if(adresaci.empty())
-        return 0;
-    else
-        return tymczasowyAdresat.idAdresata;
+    return tymczasowyAdresat.idAdresata;
 }
 
 bool sprawdzCzyUzytkownikIstniejeJuzWBazie(vector <Uzytkownik> &uzytkownicy,string nazwaUzytkownikaDoSprawdzenia) {
@@ -413,9 +410,9 @@ int main() {
 
             cin >> wybranaOpcja;
 
-            if (wybranaOpcja == 1){
-                dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);}
-            else if (wybranaOpcja == 2)
+            if (wybranaOpcja == 1) {
+                dodajAdresata(adresaci, idZalogowanegoUzytkownika, idOstatniegoAdresata);
+            } else if (wybranaOpcja == 2)
                 wyszukajPoImieniuLubNazwisku(adresaci, "imie");
             else if (wybranaOpcja == 3)
                 wyszukajPoImieniuLubNazwisku(adresaci, "nazwisko");
