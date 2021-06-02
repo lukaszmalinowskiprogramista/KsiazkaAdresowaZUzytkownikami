@@ -62,7 +62,7 @@ int wczytajDaneAdresatowZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzy
     if(plikAdresaci.good()==false) {
         cout<<"Brak Pliku z Danymi;";
         system("pause");
-
+        tymczasowyAdresat.idAdresata=0;
     } else {
         tymczasowyAdresat.idAdresata=0;
         while(getline(plikAdresaci >> ws,idAdresataString, '|')) {
@@ -81,7 +81,6 @@ int wczytajDaneAdresatowZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzy
         }
     }
     plikAdresaci.close();
-
     return tymczasowyAdresat.idAdresata;
 }
 
